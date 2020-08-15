@@ -24,13 +24,14 @@ def inputx():
     else:
         print('More')
 
-def words():
-    words = ['cat', 'window', 'defenestrate']
+def words(*args):
+    # words = ['cat', 'window', 'defenestrate']
+    words = args
     for w in words:
         print(w, len(w))
 
 if __name__ == "__main__":
     hello("World")
     inputx()
-    words()
+    words('alpha','beta','gamma')
 
