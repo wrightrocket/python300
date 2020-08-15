@@ -7,8 +7,10 @@ From https://docs.python.org/3/tutorial/controlflow.html
 Keith Wright
 '''
 
+def hello(arg,/):
+    print ('Hello {0}!'.format(arg))
 
-def main():
+def inputx():
     ''' run interactive commands '''
     x = int(input("Please enter an integer: "))
     print (x)
@@ -22,9 +24,13 @@ def main():
     else:
         print('More')
 
+def words():
     words = ['cat', 'window', 'defenestrate']
     for w in words:
         print(w, len(w))
 
 if __name__ == "__main__":
-    main()
+    hello("World")
+    inputx()
+    words()
+
